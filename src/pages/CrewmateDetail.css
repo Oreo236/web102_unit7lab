@@ -1,0 +1,79 @@
+.crewmate-detail {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.crewmate-card {
+  background-color: #1e1e2d; 
+  border: 3px solid; 
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.crewmate-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--crewmate-color, #646cff), transparent);
+}
+
+.crewmate-card h2 {
+  color: white;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.crewmate-card h2:first-child {
+  color: var(--crewmate-color, #646cff); /* Uses crewmate's color */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.crewmate-card p {
+  font-size: 1.2rem;
+  color: #dddddd;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: inline-block;
+  min-width: 60%;
+}
+
+.edit-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  background-color: var(--crewmate-color, #646cff);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.edit-button:hover {
+  background-color: transparent;
+  border-color: var(--crewmate-color, #646cff);
+  color: var(--crewmate-color, #646cff);
+}
+
+.crewmate-detail:empty::before {
+  content: "Scanning crewmate data...";
+  color: #aaa;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 2rem;
+}

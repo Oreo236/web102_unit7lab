@@ -1,24 +1,20 @@
-import { useState } from 'react'
 import './Card.css'
-import more from './more.png'
 import { Link } from 'react-router-dom'
 
 
 const Card = (props) =>  {
 
-  const [count, setCount] = useState(0)
-  const updateCount = () => {
-    setCount((count) => count + 1)
-  }
-
   return (
+    <Link to={`/crewmate/${props.id}`} className="card-link" style={{borderColor: crew.color}}>
       <div className="Card">
-          <Link to={'edit/'+ props.id}><img className="moreButton" alt="edit button" src={more} /></Link>
-          <h2 className="title">{props.title}</h2>
-          <h3 className="author">{"by " + props.author}</h3>
-          <p className="description">{props.description}</p>
-          <button className="betButton" onClick={updateCount} >👍 Bet Count: {count}</button>
+          <h2 className="name">Name of Crewmate: {props.name}</h2>
+          <h3 className="speed">Speed of Crewmate: {props.speed}  mph</h3>
+          <p className="color">Color of Crewmate:{props.color}</p>
+          <Link to={`/edit/${props.id}`}>
+            <button className="edit_button">Edit Crewmate</button>
+          </Link>
       </div>
+    </Link>
   );
 };
 
