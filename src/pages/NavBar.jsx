@@ -6,8 +6,8 @@ const NavBar = ({ activePage }) => {
     return (
         <nav className="navbar">
             <Link to="/" className={activePage === 'home' ? 'active' : ''}>Home</Link>
-            <Link to="/" className={activePage === 'create' ? 'active' : ''}>Create Crewmate</Link>
-            <Link to="/" className={activePage === 'gallery' ? 'active' : ''}>Crewmate Gallery</Link>
+            <Link to="/new" className={activePage === 'create' ? 'active' : ''}>Create Crewmate</Link>
+            <Link to="/gallery" className={activePage === 'gallery' ? 'active' : ''}>Crewmate Gallery</Link>
 
         </nav>
     )

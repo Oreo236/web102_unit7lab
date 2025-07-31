@@ -1,18 +1,17 @@
 import './App.css';
 import React from 'react';
-import { useRoutes } from 'react-router-dom'
+import { useRoutes, useLocation } from 'react-router-dom'
 import ReadCrew from './pages/ReadCrew'
 import CreateCrew from './pages/CreateCrew'
 import EditCrew from './pages/EditCrew'
 import { Link } from 'react-router-dom'
 import NavBar from './pages/NavBar';
-
+import Home from './pages/Home';
+import CrewmateDetail from './pages/CrewmateDetail';
 
 const App = () => {
+  const location = useLocation();
   
-  
-
-
   // Sets up routes
   let element = useRoutes([
     {

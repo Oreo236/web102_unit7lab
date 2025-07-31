@@ -14,7 +14,7 @@
 .ReadCrew {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(autofull, minimax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
 }

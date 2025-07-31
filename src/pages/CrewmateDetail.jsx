@@ -22,7 +22,7 @@ const CrewmateDetail = () => {
 
     return (
         <div className="crewmate-detail">
-            <div classname="crewmate-card" style={{borderColor: crew.color}}>
+            <div className="crewmate-card" style={{borderColor: crew?.color, '--crewmate-color': crew.color}}>
                 <h2>Crewmate: {crew.name}</h2>
                 <h2>Stats: </h2>
                 <p>Speed: {crew.speed} mph</p>
